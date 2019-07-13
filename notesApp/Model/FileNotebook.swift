@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import CocoaLumberjack
 
 class FileNotebook {
     
@@ -43,9 +44,9 @@ class FileNotebook {
         if !fileManager.fileExists(atPath: dataFilePath().path, isDirectory: &isDir), !isDir.boolValue  {
             do {
                 try fileManager.createDirectory(atPath: dataFilePath().path, withIntermediateDirectories: true, attributes: nil)
-                print("Created")
+                DDLogInfo("Created")
             } catch {
-                print(error.localizedDescription)
+                DDLogInfo("error")
             }
         }
         
@@ -57,12 +58,12 @@ class FileNotebook {
                     try fileManager.removeItem(atPath: filePath)
                 }
                 if fileManager.createFile(atPath: filePath, contents: data, attributes: [:]) {
-                    print("Note \(note.value.uid) saved")
+                    DDLogInfo("Note \(note.value.uid) saved")
                 } else {
-                    print("Can't save note with uid: \(note.value.uid)")
+                    DDLogInfo("Can't save note with uid: \(note.value.uid)")
                 }
             } catch {
-                print("error")
+                DDLogInfo("Error")
             }
         }
     }
@@ -75,10 +76,10 @@ class FileNotebook {
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
                     if let note = Note.parse(json: json) {
                         add(note)
-                        print("added")
+                        DDLogInfo("added")
                     }
                 } catch {
-                    print("worth")
+                    DDLogInfo("worth")
                 }
             }
         }
