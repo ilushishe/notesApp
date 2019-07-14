@@ -19,7 +19,7 @@
                     <rect key="frame" x="377" y="0.0" width="37" height="30"/>
                     <state key="normal" title="Done"/>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pallette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
                     <rect key="frame" x="0.0" y="68" width="414" height="108"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvN-8n-oIj">
@@ -48,6 +48,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Pallette" width="394" height="130.5"/>
+        <image name="Palette" width="394" height="130.5"/>
     </resources>
 </document>
