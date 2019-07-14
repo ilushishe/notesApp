@@ -9,7 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="notesApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="notesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="paletteImageView" destination="DFq-8X-fmW" id="9Uj-yG-1iq"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
@@ -19,8 +23,12 @@
                     <rect key="frame" x="377" y="0.0" width="37" height="30"/>
                     <state key="normal" title="Done"/>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
-                    <rect key="frame" x="0.0" y="68" width="414" height="108"/>
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
+                    <rect key="frame" x="0.0" y="68" width="414.00000000000011" height="108"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Dvs-9E-NmJ" appends="YES" id="UH1-Oq-Rer"/>
+                    </connections>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvN-8n-oIj">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -46,6 +54,11 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-456.52173913043481" y="206.25"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="Dvs-9E-NmJ">
+            <connections>
+                <action selector="handlePan:" destination="-1" id="F2I-Ig-uSZ"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="Palette" width="394" height="130.5"/>

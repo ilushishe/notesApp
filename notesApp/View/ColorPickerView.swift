@@ -12,6 +12,28 @@ import UIKit
 @IBDesignable
 class ColorPickerView: UIView {
     
+    
+    @IBOutlet weak var paletteImageView: UIImageView!
+    
+    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+//        sender.minimumNumberOfTouches = 1
+//
+//        let translation = sender.translation(in: paletteImageView)
+//
+//        if sender.state == .began {
+//            print("BEGAN")
+//        } else if sender.state == .recognized {
+//            print("kek")
+//        } else if sender.state == .ended {
+//            print("ended")
+//        }
+//
+//        let point = CGPoint(x: translation.x, y: translation.y)
+//        let color = getPixelColor(atPosition: point)
+//        print(point)
+//        print(color)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -35,4 +57,30 @@ class ColorPickerView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first! as! UIView
     }
     
+    func getPixelColor(atPosition:CGPoint) -> UIColor{
+        
+        var pixel:[CUnsignedChar] = [0, 0, 0, 0];
+        let colorSpace = CGColorSpaceCreateDeviceRGB();
+        let bitmapInfo = CGBitmapInfo(rawValue:    CGImageAlphaInfo.premultipliedLast.rawValue);
+        let context = CGContext(data: &pixel, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4, space: colorSpace, bitmapInfo: bitmapInfo.rawValue);
+        
+        context!.translateBy(x: -atPosition.x, y: -atPosition.y);
+        layer.render(in: context!);
+        let color:UIColor = UIColor(red: CGFloat(pixel[0])/255.0,
+                                    green: CGFloat(pixel[1])/255.0,
+                                    blue: CGFloat(pixel[2])/255.0,
+                                    alpha: CGFloat(pixel[3])/255.0);
+        
+        return color;
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("asd")
+        let touch = touches.first
+        if let point = touch?.location(in: paletteImageView) {
+            let color = getPixelColor(atPosition: point)
+            print(color)
+        }
+    }
 }

@@ -97,6 +97,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="3HK-RS-ttb" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="16v-e7-f9c"/>
+                                            <constraint firstAttribute="bottom" secondItem="c5U-2P-Cuj" secondAttribute="bottom" constant="150.5" id="5yG-sl-aOG"/>
                                             <constraint firstItem="9MP-5W-3Ry" firstAttribute="top" secondItem="h3i-tQ-TH8" secondAttribute="bottom" constant="16" id="8Ju-uA-jzz"/>
                                             <constraint firstItem="c5U-2P-Cuj" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="Awk-h7-IXf"/>
                                             <constraint firstItem="h3i-tQ-TH8" firstAttribute="top" secondItem="vLU-o8-1KL" secondAttribute="bottom" constant="16" id="CZW-hS-XGd"/>
