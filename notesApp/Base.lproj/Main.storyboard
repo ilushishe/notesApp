@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-df-krk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="819"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Lorem i" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3HK-RS-ttb" userLabel="Title Text View">
                                                 <rect key="frame" x="8" y="16" width="398" height="33"/>
@@ -59,8 +59,11 @@
                                                 </date>
                                             </datePicker>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5U-2P-Cuj" customClass="ColorPickerView" customModule="notesApp" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="469" width="398" height="198.5"/>
+                                                <rect key="frame" x="8" y="469" width="398" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="KKe-mo-a0J"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTq-J0-sFn" userLabel="Yellow Color View">
                                                 <rect key="frame" x="8" y="393" width="60" height="60"/>
@@ -97,7 +100,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="3HK-RS-ttb" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="16v-e7-f9c"/>
-                                            <constraint firstAttribute="bottom" secondItem="c5U-2P-Cuj" secondAttribute="bottom" constant="150.5" id="5yG-sl-aOG"/>
                                             <constraint firstItem="9MP-5W-3Ry" firstAttribute="top" secondItem="h3i-tQ-TH8" secondAttribute="bottom" constant="16" id="8Ju-uA-jzz"/>
                                             <constraint firstItem="c5U-2P-Cuj" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="Awk-h7-IXf"/>
                                             <constraint firstItem="h3i-tQ-TH8" firstAttribute="top" secondItem="vLU-o8-1KL" secondAttribute="bottom" constant="16" id="CZW-hS-XGd"/>
@@ -114,6 +116,7 @@
                                             <constraint firstItem="c5U-2P-Cuj" firstAttribute="top" secondItem="iic-Ea-i35" secondAttribute="bottom" constant="16" id="OYY-8F-w54"/>
                                             <constraint firstItem="o13-G3-5PX" firstAttribute="top" secondItem="3HK-RS-ttb" secondAttribute="bottom" constant="16" id="TXu-Ki-b7v"/>
                                             <constraint firstAttribute="trailing" secondItem="o13-G3-5PX" secondAttribute="trailing" constant="8" id="avO-eJ-ZdN"/>
+                                            <constraint firstAttribute="bottom" secondItem="c5U-2P-Cuj" secondAttribute="bottom" constant="150" id="fFJ-oo-9gs"/>
                                             <constraint firstItem="9MP-5W-3Ry" firstAttribute="leading" secondItem="bI3-TZ-8Hj" secondAttribute="trailing" constant="8" id="gBE-mh-oDx"/>
                                             <constraint firstItem="vLU-o8-1KL" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="gYW-fD-Mzr"/>
                                             <constraint firstItem="o13-G3-5PX" firstAttribute="leading" secondItem="jJW-df-krk" secondAttribute="leading" constant="8" id="gda-NB-ldP"/>

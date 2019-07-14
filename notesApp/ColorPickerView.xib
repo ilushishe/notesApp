@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="notesApp" customModuleProvider="target">
             <connections>
+                <outlet property="chosenColorView" destination="EvN-8n-oIj" id="nQy-2K-Pli"/>
                 <outlet property="paletteImageView" destination="DFq-8X-fmW" id="9Uj-yG-1iq"/>
             </connections>
         </placeholder>
@@ -23,8 +24,8 @@
                     <rect key="frame" x="377" y="0.0" width="37" height="30"/>
                     <state key="normal" title="Done"/>
                 </button>
-                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
-                    <rect key="frame" x="0.0" y="68" width="414.00000000000011" height="108"/>
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
+                    <rect key="frame" x="0.0" y="68" width="414" height="108.00000000000011"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="Dvs-9E-NmJ" appends="YES" id="UH1-Oq-Rer"/>
@@ -39,7 +40,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="P2v-i1-EmW" secondAttribute="trailing" id="2Wr-5x-8Uc"/>
                 <constraint firstItem="EvN-8n-oIj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6Ps-wd-ESx"/>
@@ -61,6 +62,6 @@
         </panGestureRecognizer>
     </objects>
     <resources>
-        <image name="Palette" width="394" height="130.5"/>
+        <image name="test" width="741.5" height="416.5"/>
     </resources>
 </document>

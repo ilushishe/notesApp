@@ -14,24 +14,26 @@ class ColorPickerView: UIView {
     
     
     @IBOutlet weak var paletteImageView: UIImageView!
+    @IBOutlet weak var chosenColorView: UIView!
     
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
-//        sender.minimumNumberOfTouches = 1
-//
-//        let translation = sender.translation(in: paletteImageView)
-//
-//        if sender.state == .began {
-//            print("BEGAN")
-//        } else if sender.state == .recognized {
-//            print("kek")
-//        } else if sender.state == .ended {
-//            print("ended")
-//        }
-//
-//        let point = CGPoint(x: translation.x, y: translation.y)
-//        let color = getPixelColor(atPosition: point)
-//        print(point)
-//        print(color)
+        sender.minimumNumberOfTouches = 1
+
+        let translation = sender.translation(in: paletteImageView)
+
+        if sender.state == .began {
+            print("BEGAN")
+        } else if sender.state == .recognized {
+            print("kek")
+        } else if sender.state == .ended {
+            print("ended")
+        }
+
+        let point = CGPoint(x: translation.x, y: translation.y)
+        let color = getPixelColor(atPosition: point)
+        print(point)
+        print(color)
+        chosenColorView.backgroundColor = color
     }
     
     override init(frame: CGRect) {
@@ -75,12 +77,13 @@ class ColorPickerView: UIView {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("asd")
         let touch = touches.first
         if let point = touch?.location(in: paletteImageView) {
             let color = getPixelColor(atPosition: point)
             print(color)
+            chosenColorView.backgroundColor = color
         }
     }
 }
