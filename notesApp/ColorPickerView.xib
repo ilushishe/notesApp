@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="notesApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-i1-EmW">
+                    <rect key="frame" x="377" y="0.0" width="37" height="30"/>
+                    <state key="normal" title="Done"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pallette" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-8X-fmW">
+                    <rect key="frame" x="0.0" y="68" width="414" height="108"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvN-8n-oIj">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.85604780970000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="hM5-He-32J"/>
+                        <constraint firstAttribute="width" constant="60" id="pA5-Wv-ask"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="P2v-i1-EmW" secondAttribute="trailing" id="2Wr-5x-8Uc"/>
+                <constraint firstItem="EvN-8n-oIj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6Ps-wd-ESx"/>
+                <constraint firstItem="DFq-8X-fmW" firstAttribute="top" secondItem="EvN-8n-oIj" secondAttribute="bottom" constant="8" id="CMq-X8-YeI"/>
+                <constraint firstItem="EvN-8n-oIj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RGM-Z2-NJd"/>
+                <constraint firstItem="DFq-8X-fmW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Reg-HK-klw"/>
+                <constraint firstAttribute="bottom" secondItem="DFq-8X-fmW" secondAttribute="bottom" id="X6Q-gc-wMX"/>
+                <constraint firstItem="P2v-i1-EmW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Y86-Jb-cBM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DFq-8X-fmW" secondAttribute="trailing" id="fO5-1P-IpY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-456.52173913043481" y="206.25"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Pallette" width="394" height="130.5"/>
+    </resources>
+</document>
